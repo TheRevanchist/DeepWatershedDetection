@@ -84,6 +84,8 @@ from the help. Some of the most important ones are explained here:
 
 ```pretrain_lvl``` - the net performs better if it is pretrained in some other task. For DeepScores, we first pretrained the net in semantic segmentation task (option: ```semseg```), for scanned version of DeepScores, we do finetuning of a net already trained on DeepScores (option: ```DeepScores_300dpi_2017_train```).
 
+Where we do finetuning, a pretrained net must be saved in `DeepWatershedDetection/pretrained` folder. We have nets saved there for each dataset.
+
 + Definition of training assignments
 
 We do the training in stages, as explained in ISMIR paper. You can set the number of iterations for each task in ```Itrs0, Itrs1, Itrs2, Itrs0_1, Itrs_combined```. For the best results we have so far, we use ```Itrs0, Itrs1, Itrs2, Itrs0_1, Itrs_combined = 20000, 20000, 20000, 10000, 30000```
